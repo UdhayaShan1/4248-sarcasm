@@ -1,0 +1,89 @@
+Splitting data into train/test sets...
+Train set size: 21464, Test set size: 7155
+Loading pre-computed combined features...
+Final Combined Train shape: (21464, 23982)
+Final Combined Test shape: (7155, 23982)
+Starting SVM training with gamma=scale...
+
+Test set metrics:
+Macro F1 Score: 0.9341
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.93      0.94      0.94      3746
+           1       0.94      0.93      0.93      3409
+
+    accuracy                           0.93      7155
+   macro avg       0.93      0.93      0.93      7155
+weighted avg       0.93      0.93      0.93      7155
+
+
+Confusion Matrix:
+[[3531  215]
+ [ 255 3154]]
+
+Total training time: 8.24 seconds
+Starting SVM training with gamma=auto...
+
+Test set metrics:
+Macro F1 Score: 0.9323
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.93      0.94      0.94      3746
+           1       0.94      0.92      0.93      3409
+
+    accuracy                           0.93      7155
+   macro avg       0.93      0.93      0.93      7155
+weighted avg       0.93      0.93      0.93      7155
+
+
+Confusion Matrix:
+[[3537  209]
+ [ 274 3135]]
+
+Total training time: 5.57 seconds
+Starting SVM training with gamma=0.001...
+
+Test set metrics:
+Macro F1 Score: 0.9337
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.93      0.94      0.94      3746
+           1       0.94      0.92      0.93      3409
+
+    accuracy                           0.93      7155
+   macro avg       0.93      0.93      0.93      7155
+weighted avg       0.93      0.93      0.93      7155
+
+
+Confusion Matrix:
+[[3531  215]
+ [ 258 3151]]
+
+Total training time: 6.53 seconds
+Starting Logistic Regression training...
+
+Test set metrics:
+Macro F1 Score: 0.9329
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.93      0.94      0.94      3746
+           1       0.93      0.92      0.93      3409
+
+    accuracy                           0.93      7155
+   macro avg       0.93      0.93      0.93      7155
+weighted avg       0.93      0.93      0.93      7155
+
+
+Confusion Matrix:
+[[3526  220]
+ [ 259 3150]]
+
+Total training time: 3.79 seconds

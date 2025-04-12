@@ -1,0 +1,167 @@
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt to /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package averaged_perceptron_tagger_eng to
+[nltk_data]     /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger_eng is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt to /home/y/yuchenbo/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2025-04-10 16:25:53.469770: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-04-10 16:25:53.941297: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Splitting data into train/test sets...
+Train set size: 21464, Test set size: 7155
+Using device: cuda
+Processed embedding batch 50/671
+Processed embedding batch 100/671
+Processed embedding batch 150/671
+Processed embedding batch 200/671
+Processed embedding batch 250/671
+Processed embedding batch 300/671
+Processed embedding batch 350/671
+Processed embedding batch 400/671
+Processed embedding batch 450/671
+Processed embedding batch 500/671
+Processed embedding batch 550/671
+Processed embedding batch 600/671
+Processed embedding batch 650/671
+Processed embedding batch 671/671
+Pre BERT [CLS] embeddings shape: (21464, 768)
+
+Epoch 1/3
+  Batch 50/671 | Loss: 0.2620
+  Batch 100/671 | Loss: 0.1934
+  Batch 150/671 | Loss: 0.1051
+  Batch 200/671 | Loss: 0.2070
+  Batch 250/671 | Loss: 0.1126
+  Batch 300/671 | Loss: 0.1731
+  Batch 350/671 | Loss: 0.0861
+  Batch 400/671 | Loss: 0.1608
+  Batch 450/671 | Loss: 0.1804
+  Batch 500/671 | Loss: 0.1179
+  Batch 550/671 | Loss: 0.1319
+  Batch 600/671 | Loss: 0.0704
+  Batch 650/671 | Loss: 0.0710
+  Batch 671/671 | Loss: 0.1322
+Epoch 1 finished | Avg Loss: 0.1777 | Time: 307.53s
+
+Epoch 2/3
+  Batch 50/671 | Loss: 0.0707
+  Batch 100/671 | Loss: 0.0799
+  Batch 150/671 | Loss: 0.1107
+  Batch 200/671 | Loss: 0.0680
+  Batch 250/671 | Loss: 0.1325
+  Batch 300/671 | Loss: 0.1054
+  Batch 350/671 | Loss: 0.1138
+  Batch 400/671 | Loss: 0.1013
+  Batch 450/671 | Loss: 0.0394
+  Batch 500/671 | Loss: 0.0814
+  Batch 550/671 | Loss: 0.0000
+  Batch 600/671 | Loss: 0.0448
+  Batch 650/671 | Loss: 0.0306
+  Batch 671/671 | Loss: 0.0172
+Epoch 2 finished | Avg Loss: 0.0748 | Time: 305.82s
+
+Epoch 3/3
+  Batch 50/671 | Loss: 0.0701
+  Batch 100/671 | Loss: 0.0127
+  Batch 150/671 | Loss: 0.0086
+  Batch 200/671 | Loss: 0.0672
+  Batch 250/671 | Loss: 0.0087
+  Batch 300/671 | Loss: 0.0318
+  Batch 350/671 | Loss: 0.0484
+  Batch 400/671 | Loss: 0.0088
+  Batch 450/671 | Loss: 0.0029
+  Batch 500/671 | Loss: 0.0699
+  Batch 550/671 | Loss: 0.0400
+  Batch 600/671 | Loss: 0.0215
+  Batch 650/671 | Loss: 0.0000
+  Batch 671/671 | Loss: 0.0000
+Epoch 3 finished | Avg Loss: 0.0363 | Time: 302.23s
+
+Total training time: 915.59s
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%eval%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%eval%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Processed embedding batch 50/671
+Processed embedding batch 100/671
+Processed embedding batch 150/671
+Processed embedding batch 200/671
+Processed embedding batch 250/671
+Processed embedding batch 300/671
+Processed embedding batch 350/671
+Processed embedding batch 400/671
+Processed embedding batch 450/671
+Processed embedding batch 500/671
+Processed embedding batch 550/671
+Processed embedding batch 600/671
+Processed embedding batch 650/671
+Processed embedding batch 671/671
+Processed embedding batch 50/224
+Processed embedding batch 100/224
+Processed embedding batch 150/224
+Processed embedding batch 200/224
+Processed embedding batch 224/224
+train BERT [CLS] embeddings shape: (21464, 768)
+test BERT [CLS] embeddings shape: (7155, 768)
+
+Extracting linguistic features...
+Linguistic TRAIN features shape: (21464, 17)
+Linguistic TEST features shape: (7155, 17)
+Combining Fine-tuned BERT [CLS] and linguistic features...
+Combined BERT+Ling TRAIN shape: (21464, 785)
+Combined BERT+Ling TEST shape: (7155, 785)
+Scaling combined BERT+Ling features...
+Scaled TRAIN features shape (sparse): (21464, 785)
+Scaled TEST features shape (sparse): (7155, 785)
+Generating TF-IDF features...
+TF-IDF Train shape: (21464, 23197)
+TF-IDF Test shape: (7155, 23197)
+Combining TF-IDF and Scaled (Fine-tuned BERT+Ling) features...
+Final Combined Train shape: (21464, 23982)
+Final Combined Test shape: (7155, 23982)
+
+Training Logistic Regression model on combined features...
+
+Evaluating Logistic Regression model...
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.94      0.93      3746
+           1       0.93      0.91      0.92      3409
+
+    accuracy                           0.93      7155
+   macro avg       0.93      0.92      0.93      7155
+weighted avg       0.93      0.93      0.93      7155
+
+
+Confusion Matrix:
+[[3521  225]
+ [ 307 3102]]
+
+Macro F1 Score: 0.9254
+
+--- Script Finished ---
