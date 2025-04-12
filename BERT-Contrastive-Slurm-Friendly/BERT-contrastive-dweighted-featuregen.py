@@ -274,7 +274,7 @@ BATCH_SIZE = 32 # Distance-Weighted can be memory intensive (I have H100!)
 RANDOM_STATE = 42
 
 # Contrastive Learning Config
-CONTRASTIVE_EPOCHS = 2 # Keep low for quick testing, increase for real training (e.g., 3-5)
+CONTRASTIVE_EPOCHS = 100 # Keep low for quick testing, increase for real training (e.g., 3-5)
 CONTRASTIVE_LR = 2e-5
 CONTRASTIVE_MARGIN = 0.5
 PROJECTION_DIM = 256
@@ -379,6 +379,7 @@ class ContrastiveBERT(nn.Module):
         self.use_projection = use_projection # Store the flag
         self.projection_dim = projection_dim
         self.config = bert_model.config
+        self.dropout = nn.Dropout(self.config.hidden_dropout_prob)
         if self.use_projection and self.projection_dim:
             print(f"Using projection head: {self.config.hidden_size} -> {self.projection_dim}")
             self.projection_head = nn.Sequential(nn.Linear(self.config.hidden_size, self.config.hidden_size), nn.ReLU(), nn.Linear(self.config.hidden_size, self.projection_dim))
@@ -390,6 +391,7 @@ class ContrastiveBERT(nn.Module):
         if token_type_ids is not None and 'token_type_ids' in self.bert.forward.__code__.co_varnames: bert_inputs['token_type_ids'] = token_type_ids
         outputs = self.bert(**bert_inputs)
         cls_embedding = outputs.last_hidden_state[:, 0, :]
+        cls_embedding = self.dropout(cls_embedding) # Apply dropout
         return self.projection_head(cls_embedding) # Apply projection head (or identity)
 
 # --- Loss Function: Distance-Weighted Sampling ---
@@ -525,5 +527,5 @@ print("Combined features (AFTER FT) shapes: Train {}, Test {}".format(X_train_co
 
 # --- Export Combined Features ---
 from joblib import dump, load
-dump(X_train_combined_after, "X_train_combined_distance_weighted.joblib")
-dump(X_test_combined_after, "X_test_combined_distance_weighted.joblib")
+dump(X_train_combined_after, f"X_train_combined_distance_weighted_{CONTRASTIVE_EPOCHS}.joblib")
+dump(X_test_combined_after, f"X_test_combined_distance_weighted_{CONTRASTIVE_EPOCHS}.joblib")

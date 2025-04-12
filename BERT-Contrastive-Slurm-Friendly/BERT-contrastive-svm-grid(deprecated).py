@@ -1,3 +1,4 @@
+# In[ ]:
 import pandas as pd
 import numpy as np
 import re
@@ -358,7 +359,7 @@ def create_visualization_report():
     Function to be run locally to generate all visualizations
     """
     # Load the visualization data
-    visualization_data = load('svm_visualization_data.joblib')
+    visualization_data = load('svm_macro_f1_visualization_data.joblib')
 
     # Generate all plots
     plot_gamma_performance(visualization_data)
@@ -389,9 +390,9 @@ print("All results saved to 'svm_results.joblib'")
 print("\n--- Script Finished ---")
 
 # In[ ]:
-# create_visualization_report()
-#
-# # In[ ]:
-# best_svm_model = load('svm_model_rbf.joblib')
-# y_pred = best_svm_model.predict(X_test_combined)
-# print(f1_score(y_test, y_pred, average='macro'))
+create_visualization_report()
+
+# In[ ]:
+best_svm_model = load('svm_model_rbf.joblib')
+y_pred = best_svm_model.predict(X_test_combined)
+print(f1_score(y_test, y_pred, average='macro'))
