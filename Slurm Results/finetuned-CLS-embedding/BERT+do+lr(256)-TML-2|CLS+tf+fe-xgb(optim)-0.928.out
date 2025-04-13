@@ -1,0 +1,45 @@
+Splitting data into train/test sets...
+Train set size: 21464, Test set size: 7155
+Loading pre-computed combined features...
+Final Combined Train shape: (21464, 23982)
+Final Combined Test shape: (7155, 23982)
+
+Setting up Grid Search with 5-fold cross-validation...
+
+Performing grid search...
+Fitting 5 folds for each of 48 candidates, totalling 240 fits
+/home/y/yuchenbo/anaconda3/envs/nlp_2025/lib/python3.11/site-packages/joblib/externals/loky/process_executor.py:752: UserWarning: A worker stopped while some jobs were given to the executor. This can be caused by a too short worker timeout or by a memory leak.
+  warnings.warn(
+Grid search completed in 5885.72 seconds
+
+Best parameters found:
+{'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 200}
+Best cross-validation macro F1 score: 0.9858
+
+Test Set Evaluation:
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.94      0.93      3746
+           1       0.93      0.92      0.92      3409
+
+    accuracy                           0.93      7155
+   macro avg       0.93      0.93      0.93      7155
+weighted avg       0.93      0.93      0.93      7155
+
+
+Confusion Matrix:
+[[3518  228]
+ [ 288 3121]]
+
+Test Set Macro F1 Score: 0.9277
+
+Best model saved as 'best_xgboost_model.joblib'
+
+Parameter importance (based on score variance):
+learning_rate: 0.000000
+max_depth: 0.000000
+n_estimators: 0.000000
+
+--- Grid Search Completed ---
